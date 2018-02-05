@@ -1,77 +1,9 @@
 FORMAT: 1A
-HOST: http://weiterertest.apiblueprint.org/
 
-# Melvins REST
+# My Api
 
-Vorbereitung auf SETTie RESTs
+## Get [/places]
 
-## Login [/login]
-
-### POST [POST]
-
-Wir loggen uns ein
-
-+ Request (application/json)
-    + Attributes (UserCredentials)
-
-+ Response 200 (application/json)
-    + Headers
-
-            Location: /projects
-        
-## Projects [/projects]
-
-### List [GET]
-
-+ Response 200 (application/json)
-    +Attributes (array[ProjectSummary])
++ Response (text/plain)
     
-    + Body
-    
-            [{
-            "id": "d113358c-0817-11e8-ba89-0ed5f89f718b",
-            "name": "IKS Prüfung bei DB",
-            "score": 82,
-            "executionProgress": 55
-            },
-            {
-            "id": "d113382a-0817-11e8-ba89-0ed5f89f718b",
-            "name": "IKS Prüfung bei DeutschePost",
-            "score": 99,
-            "executionProgress": 100
-            },
-            {
-            "id": "d1133974-0817-11e8-ba89-0ed5f89f718b",
-            "name": "IKS Prüfung bei EON",
-            "score": 12,
-            "executionProgress": 72
-            },
-            {
-            "id": "d1133d98-0817-11e8-ba89-0ed5f89f718b",
-            "name": "IKS Prüfung bei VW",
-            "score": 65,
-            "executionProgress": 78
-            },
-            {
-            "id": "d1133ec4-0817-11e8-ba89-0ed5f89f718b",
-            "name": "IKS Prüfung bei Hanse Merkur",
-            "score": 2,
-            "executionProgress": 5
-            },
-            ]
-
-# Data Structures
-
-## UUID (string)
-
-## ProjectSummary
-
-* id: uuid (UUID)
-* name: 'IKS Prüfungs bei DB' (string)
-* score: 42 (number)
-* executionProgress: 76 (number) 100 based progress percentage
-
-## UserCredentials
-* name: Melvin (string)
-* age: 27 (number)
-* password: 1234 (number)
+      Hallo Settie!

@@ -1,14 +1,61 @@
 FORMAT: 1A
+# My API
 
-# My Api
+Eine Test API
 
-## Get [/places]
+# Group Möglichkeiten
+
+## Person Collection [/test]
+
+### GET
 
 + Response 200 (application/json)
-    
-        {
-            "places" : [{
-                "id" : "fRg5",
-                "name" : "Melvin"
-                }]
-        }
+    + Attributes
+        - test (array[Person Full])
+
+### POST
+
++ Request (application/json)
+    + Attributes
+        - test (Person Create)
+
++ Response 200 (application/json)
+    + Attributes
+        - test (Person Full)
+
+## Person Resource [/test/{id}]
+
++ Parameters
+  + id: `fRge5` - Die ID der Person
+
+### GET
+
++ Response 200 (application/json)
+    + Attributes
+        - test (Person Full)
+
+### PUT
+
++ Request (application/json)
+    + Attributes
+        - test (Person Full)
+
++ Response 200 (application/json)
+    + Attributes
+        - test (Person Full)
+
+### DELETE
+
++ Response 204
+
+# Data Structures
+
+## Person Create (object)
+
+- name: `Battery Harris` (string, required) - Name of the Person.
+
+
+## Person Full (object)
+
+- id: `fRge5` (string, required) - The unique ID of the Person.
+- Include Person Create
